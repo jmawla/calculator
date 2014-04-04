@@ -1,0 +1,52 @@
+#calculatorBody {
+	width: 225px;
+	border: 10px solid maroon;
+	border-style: ridge;
+	margin: 8px;
+	height: 315px;
+}
+#displaySection {
+	height: 25px;
+	border: 12px solid gray;
+	margin: 1px;
+}
+#displaySection input{
+    border-style: none;
+    height: 17px;
+    width: 196px;
+    padding: 0px;
+    text-align: right;
+}
+.buttonRow {
+	height: 50px;
+	background: rgb(95, 95, 95);
+	border-bottom-style: solid;
+}
+.numButton {
+    float: left;
+    width: 46px;
+    height: 40px;
+    margin: 5px;
+    background: black;
+    color: white;
+    font-size: medium;
+    position: center;
+}
+.numButton:hover{
+	background-color: blue;
+	cursor: pointer;
+}
+.numButton:focus{
+	background-color: red;
+}
+.OnButton {
+   float: left;
+    width: 46px;
+    height: 40px;
+    margin: 5px;
+    background: red;
+    color: white;
+    font-size: medium;
+    position: center;	
+}
+

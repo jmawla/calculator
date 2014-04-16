@@ -3,7 +3,9 @@
 	<head> 
 		<title>Calculator</title>
 		<link rel='stylesheet' href='calculator.css' type='text/css'> 
+		<script src="calculator.js"></script>
 	</head> 
+
 
 	<body>
 		<div id='calculatorBody'>
@@ -11,40 +13,37 @@
 				<input type='text' name='display' id='display' readonly='true' value='0.'>
 			</div>
 			<div class='buttonRow'>
-				<input type='button' value='C' class='numButton'>
-				<input type='button' value='CE' class='numButton'>
-				<input type='button' value='+/-' class='numButton'>
-				<input type='button' value='ON' class='OnButton'>
+				<input type='button' value='C' class='numButton' onclick='calculatorApp.clickClear(value)'>
+				<input type='button' value='CE' class='numButton' onclick='calculatorApp.clickClearEntry(value)'>
+				<input type='button' value='+/-' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='ON' class='OnButton' onclick='calculatorApp.clickDigit(value)'>
 			</div>
 			<div class='buttonRow'>
-				<input type='button' value='7' class='numButton'>
-				<input type='button' value='8' class='numButton'>
-				<input type='button' value='9' class='numButton'>
-				<input type='button' value='*' class='numButton'>
+				<input type='button' value='7' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='8' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='9' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='*' class='numButton' onclick='calculatorApp.clickOperator(value)'>
 			</div>
 			<div class='buttonRow'>
-				<input type='button' value='4' class='numButton'>
-				<input type='button' value='5' class='numButton'>
-				<input type='button' value='6' class='numButton'>
-				<input type='button' value='/' class='numButton'>
+				<input type='button' value='4' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='5' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='6' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='/' class='numButton' onclick='calculatorApp.clickOperator(value)'>
 			</div>
 			<div class='buttonRow'>
-				<input type='button' value='1' class='numButton'>
-				<input type='button' value='2' class='numButton'>
-				<input type='button' value='3' class='numButton'>
-				<input type='button' value='+' class='numButton'>
+				<input type='button' value='1' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='2' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='3' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='+' class='numButton' onclick='calculatorApp.clickOperator(value)'>
 			</div>
 			<div class='buttonRow'>
-				<input type='button' value='0' class='numButton'>
-				<input type='button' value='.' class='numButton'>
-				<input type='button' value='=' class='numButton'>
-				<input type='button' value='-' class='numButton'>
+				<input type='button' value='0' class='numButton' onclick='calculatorApp.clickDigit(value)'>
+				<input type='button' value='.' class='numButton' onclick='calculatorApp.clickDecimal(value)'>
+				<input type='button' value='=' class='numButton' onclick='calculatorApp.clickEquals(value)'>
+				<input type='button' value='-' class='numButton' onclick='calculatorApp.clickOperator(value)'>
 			</div>
-
 		</div>
-
-
-
 	</body> 
+	
 
 </html> 

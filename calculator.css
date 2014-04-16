@@ -33,11 +33,13 @@
     position: center;
 }
 .numButton:hover{
-	background-color: blue;
+	background-color: #CEE3F6;
+    color: black;
 	cursor: pointer;
 }
 .numButton:focus{
-	background-color: red;
+	background-color: #81DAF5;
+    color: black;
 }
 .OnButton {
    float: left;

@@ -27,25 +27,15 @@ window.calculatorApp = {
 		else{
 			calculatorState.pendingOperation = op;
 			this.executeOp();
-//			this.resetall();
-
-		calculatorState.currentValue = '';
-//		calculatorState.pendingOperation = '';
-		decimalOn = false;
+			calculatorState.currentValue = '';
+			decimalOn = false;
 		}
-	},
-
-	clickEquals: function(){
-//		calculatorState.pendingOperation = op;
-		this.executeOp();
-		calculatorState.previousValue = '';
-		this.resetall();
 	},
 
 	executeOp: function(){
 		var previous = parseFloat(calculatorState.previousValue);
 		var current = parseFloat(calculatorState.currentValue);
-		if(calculatorState.previousValue === ''){
+		if(calculatorState.previousValue === '' || calculatorState.currentValue === ''){
 			display.value = 'ERROR';
 		}
 		else{
@@ -67,14 +57,21 @@ window.calculatorApp = {
 		}
 	},
 
-	resetall: function(){
-		calculatorState.currentValue = '';
-		calculatorState.previousValue = '';
+	clickEquals: function(){
+		this.executeOp();
+//		calculatorState.previousValue = '';
+//		this.resetall();
+		calculatorState.currentValue = calculatorState.previousValue;
+		calculatorState.previousValue= '';
 		calculatorState.pendingOperation = '';
-		decimalOn = false;
-	
-
 	},
+
+//	resetall: function(){
+//		calculatorState.currentValue = '';
+//		calculatorState.previousValue = '';
+//		calculatorState.pendingOperation = '';
+//		decimalOn = false;
+//	},
 
 	clickDecimal: function(digit){
 		if(!decimalOn){
@@ -87,14 +84,11 @@ window.calculatorApp = {
 			display.value = calculatorState.currentValue;
 			decimalOn = true;			
 		}
-
 	},
 
 	clickClear: function(){
-		display.value = '0';
-		calculatorState.currentValue = '';
 		calculatorState.pendingOperation = '';
-		decimalOn = false;
+		this.clickClearEntry();
 	},
 
 	clickClearEntry: function(){

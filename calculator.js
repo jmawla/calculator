@@ -1,5 +1,9 @@
 // 'use strict;'
 
+/*$(document).ready(function(){
+	$('.numButton').fadeOut('slow');
+});*/
+
 var calculatorState = {
 	currentValue: '',
 	previousValue: '',

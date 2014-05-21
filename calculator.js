@@ -12,6 +12,7 @@ var calculatorState = {
 
 var decimalOn = false;
 var equalClicked = false;
+var onState = false;
 
 window.calculatorApp = {
 
@@ -69,20 +70,11 @@ window.calculatorApp = {
 
 	clickEquals: function(){
 		this.executeOp();
-//		calculatorState.previousValue = '';
-//		this.resetall();
 		calculatorState.currentValue = calculatorState.previousValue;
 		calculatorState.previousValue= '';
 		calculatorState.pendingOperation = '';
 		equalClicked = true;
 	},
-
-//	resetall: function(){
-//		calculatorState.currentValue = '';
-//		calculatorState.previousValue = '';
-//		calculatorState.pendingOperation = '';
-//		decimalOn = false;
-//	},
 
 	clickDecimal: function(digit){
 		if(!decimalOn){
@@ -110,7 +102,15 @@ window.calculatorApp = {
 		decimalOn = false;
 	},
 
-	clickOnOff: function() {
-		alert('on key clicked');
+	clickOnOff: function(value) {
+		if(onState != value) {
+			$(".OnButton").css({'background':'red'});
+			onState = true;
+			display.value = '0.';
+		} else {
+			$(".OnButton").css({'background':'black'});
+			onState = false;
+			display.value = '';
+		}
 	}
 }

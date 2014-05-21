@@ -12,13 +12,13 @@
 	<body>
 		<div id='calculatorBody'>
 			<div id='displaySection'>
-				<input type='text' name='display' id='display' readonly='true' value='0.'>
+				<input type='text' name='display' id='display' readonly='true' value=''>
 			</div>
 			<div class='buttonRow'>
 				<input type='button' value='C' class='numButton' onclick='calculatorApp.clickClear(value)'>
 				<input type='button' value='CE' class='numButton' onclick='calculatorApp.clickClearEntry(value)'>
 				<input type='button' value='+/-' class='numButton' onclick='calculatorApp.clickDigit(value)'>
-				<input type='button' value='ON' class='OnButton' onclick='calculatorApp.clickOnOff(value)'>
+				<input type='button' value='ON' class='OnButton' onclick='calculatorApp.clickOnOff(true)'>
 			</div>
 			<div class='buttonRow'>
 				<input type='button' value='7' class='numButton' onclick='calculatorApp.clickDigit(value)'>

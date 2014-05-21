@@ -11,14 +11,20 @@ var calculatorState = {
 };
 
 var decimalOn = false;
+var equalClicked = false;
 
 window.calculatorApp = {
 
 	clickDigit: function(digit){
-		if(digit !== 0 || calculatorState.currentValue) {
+		if(!equalClicked && (digit !== 0 || calculatorState.currentValue) ) {
 			calculatorState.currentValue += digit;
 		}
-			display.value = calculatorState.currentValue;
+		else {
+			display.value = 0;
+			equalClicked = false;
+			calculatorState.currentValue = digit;
+		} 
+		display.value = calculatorState.currentValue;
 	},
 
 	clickOperator: function(op){
@@ -29,8 +35,8 @@ window.calculatorApp = {
 			decimalOn = false;
 		}
 		else{
-			calculatorState.pendingOperation = op;
 			this.executeOp();
+			calculatorState.pendingOperation = op;
 			calculatorState.currentValue = '';
 			decimalOn = false;
 		}
@@ -68,6 +74,7 @@ window.calculatorApp = {
 		calculatorState.currentValue = calculatorState.previousValue;
 		calculatorState.previousValue= '';
 		calculatorState.pendingOperation = '';
+		equalClicked = true;
 	},
 
 //	resetall: function(){
@@ -92,6 +99,8 @@ window.calculatorApp = {
 
 	clickClear: function(){
 		calculatorState.pendingOperation = '';
+		calculatorState.previousValue = '';
+		equalClicked = false;
 		this.clickClearEntry();
 	},
 
@@ -99,5 +108,9 @@ window.calculatorApp = {
 		calculatorState.currentValue = '';
 		display.value = '0';
 		decimalOn = false;
+	},
+
+	clickOnOff: function() {
+		alert('on key clicked');
 	}
 }

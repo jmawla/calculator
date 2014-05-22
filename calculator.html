@@ -3,8 +3,8 @@
 	<head> 
 		<title>Calculator</title>
 		<link rel='stylesheet' href='calculator.css' type='text/css'> 
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 		<script type='text/javascript' src="calculator.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
 		</script>
 	</head> 
 
@@ -18,7 +18,9 @@
 				<input type='button' value='C' class='numButton' onclick='calculatorApp.clickClear(value)'>
 				<input type='button' value='CE' class='numButton' onclick='calculatorApp.clickClearEntry(value)'>
 				<input type='button' value='+/-' class='numButton' onclick='calculatorApp.clickDigit(value)'>
-				<input type='button' value='ON' class='OnButton' onclick='calculatorApp.clickOnOff(true)'>
+<!--			</div>
+			<div>
+-->				<input type='button' value='ON' class='OnButton' onclick='calculatorApp.clickOnOff(true)'>
 			</div>
 			<div class='buttonRow'>
 				<input type='button' value='7' class='numButton' onclick='calculatorApp.clickDigit(value)'>

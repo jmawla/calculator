@@ -3,7 +3,13 @@
 /*$(document).ready(function(){
 	$('.numButton').fadeOut('slow');
 });*/
-
+$(document).ready(function() {
+//	$(".OnButton").css({'background':'black'});
+//	onState = false;
+//	display.value = '';
+	$('.numButton').prop('disabled', true);
+	
+});
 var calculatorState = {
 	currentValue: '',
 	previousValue: '',
@@ -107,10 +113,12 @@ window.calculatorApp = {
 			$(".OnButton").css({'background':'red'});
 			onState = true;
 			display.value = '0.';
+			$('.numButton').prop('disabled', false);
 		} else {
 			$(".OnButton").css({'background':'black'});
 			onState = false;
 			display.value = '';
+			$('.numButton').prop('disabled', true);
 		}
 	}
 }

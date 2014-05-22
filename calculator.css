@@ -1,3 +1,22 @@
+body {
+    font: 14px Verdana, Geneva, sans-serif;
+/*    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    line-height: 1.4em;
+    background: #eaeaea url('bg.png');
+    color: #4d4d4d;
+    width: 30%;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+#header {
+    text-align: center;
+    width: 255px;
+
+}
 #calculatorBody {
 	width: 225px;
 	border: 10px solid maroon;
@@ -12,8 +31,8 @@
 }
 #displaySection input{
     border-style: none;
-    height: 17px;
-    width: 196px;
+    height: 25px;
+    width: 200px;
     padding: 0px;
     text-align: right;
 }

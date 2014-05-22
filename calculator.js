@@ -10,6 +10,7 @@ $(document).ready(function() {
 	$('.numButton').prop('disabled', true);
 	
 });
+
 var calculatorState = {
 	currentValue: '',
 	previousValue: '',
